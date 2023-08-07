@@ -1,0 +1,82 @@
+.containerWrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+	width: 100%;
+	height: 100vh;
+}
+
+.container{
+	flex: 1;
+	display: flex;
+	//flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	width: 50%;
+	background-color: var(--green-900);
+}
+
+.containerCenter{
+	flex: 1;
+  min-height: 100vh;
+  display: flex;
+	width: 50%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--white);
+	background-image: url('../public/assets/download.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.containerIpunt{
+	display: flex;
+	width: 400px;
+	height: 300px;
+	background-color: var(--brown);
+	align-items: center;
+	justify-content: center;
+}
+
+.login{
+  width: 300px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  h1{
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  form button{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-self: center;
+    height: 40px;
+		width: 150px;
+    font-size: 1.2rem;
+  }
+}
+
+.text{
+  margin-top: 1rem;
+  color: var(--white);
+  cursor: pointer;
+}
+
+// Quando chegarmos em 620px de largura, o login vai ter 90% de largura
+@media (max-width: 620px) {
+  .login{
+    width: 90%;
+  }
+}
