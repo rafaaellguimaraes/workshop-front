@@ -5,16 +5,47 @@
 	align-items: stretch;
 	width: 100%;
 	height: 100vh;
+	background-color: var(--white);
+}
+
+.containerleft{
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	background-color: var(--white);
+}
+
+.subtitle{
+	text-align: center;
+	color: var(--brown);
+	font-family: 'Maven Pro';
+}
+
+.title{
+	align-self: center;
+	justify-content: flex-end;
+	color: var(--brown);
+	font-size: 8.3rem; //equivale a 104px
+}
+
+.description{
+	align-self: center;
+	justify-content: flex-start;
+	color: var(--brown);
+	font-size: 2rem; //equivale a 32px
+	font-family: 'Poppins';
 }
 
 .container{
 	flex: 1;
 	display: flex;
-	//flex-direction: row;
 	justify-content: flex-start;
 	align-items: stretch;
 	width: 50%;
-	background-color: var(--green-900);
+	background-color: var(--white);
 }
 
 .containerCenter{
@@ -41,14 +72,16 @@
 }
 
 .login{
-  width: 300px;
+  width: 320px;
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  h1{
+  h2{
     color: var(--white);
-    margin-bottom: 1rem;
+		font-size: 20px;
+		font-family: 'Poppins';
+		margin-bottom: 5px;
   }
 
   form{
@@ -64,7 +97,8 @@
 		align-self: center;
     height: 40px;
 		width: 150px;
-    font-size: 1.2rem;
+    font-size: 1rem;
+		font-family: 'Poppins';
   }
 }
 
@@ -72,6 +106,7 @@
   margin-top: 1rem;
   color: var(--white);
   cursor: pointer;
+	font-family: 'Poppins';
 }
 
 // Quando chegarmos em 620px de largura, o login vai ter 90% de largura

@@ -36,9 +36,9 @@ body{
   background: var(--backgorund);
 }
 
-body, input, button, textarea, select{
-  font: 400 1rem sans-serif; // * 1rem = 16px
-}
+// body, input, button, textarea, select{
+//   font: 400 1rem sans-serif; // * 1rem = 16px
+// }
 
 @media(max-width: 720px){
   // html é o elemento raiz da nossa aplicação

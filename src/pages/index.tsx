@@ -39,14 +39,25 @@ export default function Home() {
 				</title>
 			</Head>
 			<div className={styles.containerWrapper}>
-				<div className={styles.container}>
-					<h1>Teste</h1>
+				<div className={styles.containerleft}>
+					<div className={styles.container}>
+						<div className={styles.title}>
+							<h2>21</h2>
+						</div>
+						<div className={styles.description}>
+							<h3>dias para<br/>transformar<br/>a SUA VIDA</h3>
+						</div>
+					</div>
+					<div className={styles.subtitle}>
+						<h3>WHORKSHOP GRATUITO</h3>
+						<h3>DESCUBRA O CAMINHO PARA A MUDANÇA!</h3>
+					</div>
 				</div>
 				<div className={styles.containerCenter}>
 					<div className={styles.containerIpunt}>
 					<div className={styles.login}>
 						<form onSubmit={handleLogin}>
-							<h1>Login:</h1>
+							<h2>Login:</h2>
 							<Input 
 								type="text"
 								placeholder="Digite seu email"
