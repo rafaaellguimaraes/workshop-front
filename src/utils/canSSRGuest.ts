@@ -10,7 +10,7 @@ export function canSSRGuest<P extends {[key: string]: any}>(fn: GetServerSidePro
 		if (cookies['@nextauth.token']) {
 			return {
 				redirect: {
-					destination: '/dashboard',
+					destination: '/',
 					permanent: false
 				}
 			}

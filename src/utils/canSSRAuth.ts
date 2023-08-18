@@ -12,7 +12,7 @@ export function canSSRAuth<P extends {[key: string]: any}>(fn: GetServerSideProp
 		if(!token){
 			return {
 				redirect: {
-					destination: '/',
+					destination: '/home',
 					permanent: false
 				}
 			}

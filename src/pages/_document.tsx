@@ -9,9 +9,9 @@ export default function Document() {
         rel="stylesheet"
       />
 			<link 
-				href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" 
-				rel="stylesheet">
-			</link>
+				href="https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@200&display=swap" 
+				rel="stylesheet" 
+			/>
 			</Head>
       <body>
         <Main />

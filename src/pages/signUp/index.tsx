@@ -2,32 +2,34 @@ import Head from "next/head";
 import Link from "next/link";
 import { FormEvent, useContext, useState } from "react";
 import { toast } from "react-toastify";
-import styles from '../../styles/Home.module.scss';
-import { Button } from '../components/Button';
-import { Input } from "../components/Input";
-import { AuthContext } from "../context/AuthContext";
-import { canSSRGuest } from '../utils/canSSRGuest';
+import styles from '../../../styles/Home.module.scss';
+import { Button } from '../../components/Button';
+import { Input } from "../../components/Input";
+import { AuthContext } from "../../context/AuthContext";
+import { canSSRGuest } from '../../utils/canSSRGuest';
 
 export default function Home() {
-	const {signIn} = useContext(AuthContext);
+	const {signUp} = useContext(AuthContext);
+	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [loading, setLoading] = useState(false);
 
 	async function handleLogin(event: FormEvent) {
 		event.preventDefault();
 
-		if (!email) {
-			toast.error('Email é obrigatório');
+		if (!email || !name) {
+			toast.error('Email e Nome é obrigatório');
 			return;
 		}
 
 		setLoading(true);
 
 		let data = {
-			email
+			email,
+			name
 		}
 
-		await signIn(data);
+		await signUp(data);
 		setLoading(false);
 	}
 
@@ -57,18 +59,24 @@ export default function Home() {
 					<div className={styles.containerIpunt}>
 					<div className={styles.login}>
 						<form onSubmit={handleLogin}>
-							<h2>Login:</h2>
+							<h2>Cadastre-se:</h2>
 							<Input 
 								type="text"
 								placeholder="Digite seu email"
 								value={email}
 								onChange={event => setEmail(event.target.value)}
 							/>
-							<Button type="submit" loading={loading}>Acessar</Button>
+							<Input 
+								type="text"
+								placeholder="Digite seu nome"
+								value={name}
+								onChange={event => setName(event.target.value)}
+							/>
+							<Button type="submit" loading={loading}>Cadastrar</Button>
 						</form>
 
-						<Link href='/signUp' legacyBehavior>
-							<a className={styles.text}>Ainda não se inscreveu? se inscreva!</a>
+						<Link href='/' legacyBehavior>
+							<a className={styles.text}>Já tem uma conta? Faça o login!</a>
 						</Link>
 					</div>
 					</div>

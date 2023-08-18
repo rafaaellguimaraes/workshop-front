@@ -2,9 +2,9 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	align-items: stretch;
+	align-items: center;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	background-color: var(--white);
 }
 
@@ -29,6 +29,7 @@
 	justify-content: flex-end;
 	color: var(--brown);
 	font-size: 8.3rem; //equivale a 104px
+	font-family: 'Poppins';
 }
 
 .description{
@@ -110,8 +111,31 @@
 }
 
 // Quando chegarmos em 620px de largura, o login vai ter 90% de largura
-@media (max-width: 620px) {
+@media (max-width: 1024px) {
   .login{
     width: 90%;
+  }
+}
+
+/* Quando a largura da tela for menor ou igual a 1024px */
+@media (max-width: 768px) {
+  .containerWrapper {
+    flex-direction: column; /* Coloque os contêineres em uma única coluna */
+		align-items: center;
+  }
+
+  .containerleft, .containerCenter {
+    width: 100%; /* Use 100% de largura em vez de 50% */
+  }
+}
+
+/* Quando a largura da tela for menor ou igual a 768px */
+@media (max-width: 768px) {
+  .title {
+    font-size: 6rem; /* Reduza o tamanho do título para evitar que ele fique muito grande */
+  }
+
+  .description {
+    font-size: 1.5rem; /* Reduza o tamanho da descrição */
   }
 }
