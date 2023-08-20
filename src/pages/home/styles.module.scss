@@ -1,0 +1,18 @@
+.header {
+	display: flex;
+	background-color: var(--brown);
+	color: var(--white);
+	flex-direction: row;
+}
+.header h1 {
+	font-size: 4rem;
+	font-family: 'Poppins';
+	margin-left: 2rem;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--brown-button);
+}
